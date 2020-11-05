@@ -1,0 +1,76 @@
+/* table, th, td
+{
+    border: 1px solid black;
+    padding-left: 10em;
+    padding-right: 10em;
+} */
+.w-own
+{
+    width: 22% !important;
+    position: relative;
+    /* border-radius: 1.25em !important; */
+}
+
+select {
+    font: 400 12px/1.3 sans-serif;
+    -webkit-appearance: none;
+    appearance: none;
+    color: black;
+    border: 0.12em solid var(--baseFg);
+    line-height: 1;
+    outline: 0;
+    background-color: var(--baseBg);
+    background-image: linear-gradient(var(--baseFg), var(--baseFg)),
+      linear-gradient(-135deg, transparent 50%, var(--accentBg) 50%),
+      linear-gradient(-225deg, transparent 50%, var(--accentBg) 50%),
+      linear-gradient(var(--accentBg) 42%, var(--accentFg) 42%);
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-size: 1px 100%, 20px 22px, 20px 22px, 20px 100%;
+    background-position: right 20px center, right bottom, right bottom, right bottom;   
+  }
+  
+  select:hover {
+    background-image: linear-gradient(var(--accentFg), var(--accentFg)),
+      linear-gradient(-135deg, transparent 50%, var(--accentFg) 50%),
+      linear-gradient(-225deg, transparent 50%, var(--accentFg) 50%),
+      linear-gradient(var(--accentFg) 42%, var(--accentBg) 42%);
+  }
+  
+  select:active {
+    background-image: linear-gradient(var(--accentFg), var(--accentFg)),
+      linear-gradient(-135deg, transparent 50%, var(--accentFg) 50%),
+      linear-gradient(-225deg, transparent 50%, var(--accentFg) 50%),
+      linear-gradient(var(--accentFg) 42%, var(--accentBg) 42%);
+    color: var(--accentBg);
+    border-color: var(--accentFg);
+    background-color: var(--accentFg);
+  }
+  .w-own {
+    --radius: 2em;
+    --baseFg: #c70062;
+    --baseBg: #ffe3f1;
+    --accentFg: #c70062;
+    --accentBg: #ffaad4;
+  }
+.button-own
+{
+    margin-left: 79%;
+    margin-top: 2.5%;
+    margin-bottom: 3%;
+}
+.t-25
+{
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+body
+{
+    background-color: #85FFBD;
+background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+
+}
+#ms-log
+{
+    display: none;
+    color: red !important;
+}

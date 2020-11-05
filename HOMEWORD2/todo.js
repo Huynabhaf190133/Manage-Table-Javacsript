@@ -31,8 +31,17 @@ function insertTable() {
   // if (name.trim() == "" || status.trim() == "" || time.trim() == "") {
   //   alert("Vui lòng nhập đủ thông tin");
   // }
-  if (input.trim() == "") {
+  if (input == "") {
     document.getElementById("ms-log").style.display = "block";
+    input == "";
+  } else if (input.trim() == "") {
+    document.getElementById("ms-log").style.display = "block";
+    document.getElementById("ms-log").innerHTML = "You are kidding Me !!!";
+    input == "";
+  } else if (input.length <= 5) {
+    document.getElementById("ms-log").style.display = "block";
+    document.getElementById("ms-log").innerHTML = "Nhập trên 5 kí tự nhé !!!";
+    input == "";
   } else {
     document.getElementById("ms-log").style.display = "none";
     if (document.getElementById("table") == undefined) {
@@ -50,10 +59,12 @@ function insertTable() {
     // innerHTML to show data
     // table.innerHTML += "<tr>" + tr + th + td + "</tr>";
     //ENd
+    document.getElementById("Done").innerHTML="<option>"+"Done"+"</option>";
     table.innerHTML += "<tr>" + "<td>" + input + "</td>" + "</tr>";
     return;
   }
 }
+
 function createTable() {
   var content = "";
   var title1 = "";

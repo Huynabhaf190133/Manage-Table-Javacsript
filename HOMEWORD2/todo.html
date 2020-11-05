@@ -15,7 +15,9 @@
   <body>
     <div class="container">
       <div class="row">
+        <!--THis is responsive LG-->
         <div class="col-lg-12">
+          <!--Text align with bootrap-->
           <h1 class="text-center text-primary t-25">TODO List</h1>
           <input
             id="input"
@@ -23,10 +25,9 @@
             type="text"
             placeholder="Bạn nhập việc cần làm"
           />
-          <select class="rounded-pill w-own">
-            <option value="Todo">Todo</option>
-            <option value="Done">Done</option>
-          </select>
+          <select class="w-own">
+            <option value="Todo" id="Done" class="custom-selected">Todo</option>
+          </select> 
           <!--Thông tin báo lỗi-->
           <small class="form-text text-muted" id="ms-log"
             >Vui lòng nhập đủ thông tin !!!</small
