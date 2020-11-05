@@ -1,0 +1,32 @@
+/* table, th, td
+{
+    border: 1px solid black;
+    padding-left: 10em;
+    padding-right: 10em;
+} */
+.w-own
+{
+    width: 22% !important;
+}
+.button-own
+{
+    margin-left: 79%;
+    margin-top: 2.5%;
+    margin-bottom: 3%;
+}
+.t-25
+{
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+body
+{
+    background-color: #0093E9;
+background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+
+}
+#ms-log
+{
+    display: none;
+    color: red !important;
+}
