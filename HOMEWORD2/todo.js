@@ -63,20 +63,35 @@ function readTable()
 {
   var trData="";
   var local=JSON.parse(localStorage.getItem("danhsach"));
-  
   if(local!=null)
   {
     for(var i=0;i<local.length;i++)
     {
-      trData+="<tr onclick='getDetail("+i+")'>"+"<td>"+local[i].ten+"</td>"+"<td>"+local[i].trangthai+"</td>"+"<td>"+local[i].thoigian+"</td>"+"</tr>";
+      trData+="<tr class='timeme' onclick='getDetail("+i+")'>"+"<td>"+local[i].ten+"</td>"+"<td>"+local[i].trangthai+"</td>"+"<td>"+local[i].thoigian+"</td>"+"</tr>";
     }
     document.getElementById("tbody").innerHTML=trData;
   }
+  
 }
+// Expried Data 5 seconds
+function Expired()
+{
+  setInterval(
+    function()
+    {
+            var ele=document.getElementsByClassName("timeme");
+            for (var i = 0; i < ele.length; i++) 
+            {
+              ele[i].style.background="red";
+            }
+    }
+    ,10000)
+}
+Expired();
+
 // Get Stt
 function getDetail(currentIndex)
 {
-  debugger
   storageLocalget=currentIndex;
   document.getElementById("input").value=dsach[currentIndex].ten;
 }
@@ -95,3 +110,71 @@ function deleteData()
   readTable();
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var data = {
+  "todo": [
+    {
+      "name": "mot",
+      "time": "14:04:00"
+    },
+    {
+      "name": "hai",
+      "time": "17:30:00",
+    },
+	]
+};
+
+
+// function render(){
+// 	//Create date variable
+//   var today = new Date();
+//   //Get current date time
+//   var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+//   var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+//   var dateTime = Date.parse(date+' '+time);
+//   let i = 1;
+//   data['todo'].forEach(function(dt){
+//     let timer = Date.parse(date + " " + dt.time);
+  
+// 			document.getElementById('todo-list').innerHTML += '<div id="' +i+ '">' + i +' = '+ dt.name + '</div>';
+//     if((dateTime - timer)/1000/60 > 10){
+//     	document.getElementById(i).style.color = "red";
+//     }
+// 		i++;  	
+//   });
+// }
+
+// render();
