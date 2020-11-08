@@ -17,78 +17,99 @@
       <div class="row">
         <!--THis is responsive LG-->
         <div class="col-lg-12">
+          <!--Clock-->
+          <h2 id="clock" class="ml-3 mt-3">00 : 00 : 00</h2>
           <!--Text align with bootrap-->
           <h1 class="text-center text-primary t-25">TODO List</h1>
           <input
             id="input"
-            class="rounded-pill w-75"
+            class="rounded-pill w-100 form-control"
             type="text"
             placeholder="Bạn nhập việc cần làm"
           />
-          <select class="w-own">
-            <option value="Todo" id="Done" class="custom-selected">Todo</option>
-          </select> 
-          <!--Thông tin báo lỗi-->
+           <!--Thông tin báo lỗi-->
           <small class="form-text text-muted" id="ms-log"
             >Vui lòng nhập đủ thông tin !!!</small
           >
+        </div>
+        <div class="col-lg-12">
+          <div class=" dropdown">
+            <button
+              class="form-control"
+              id="dropdownButton"
+              aria-haspopup="true"
+              aria-expanded="false"
+              data-toggle="dropdown"
+            >
+              <span id="btn-content">Done</span><i id="triangle-down"></i>
+            </button>
+            <ul
+              id="dropdown-option"
+              class="dropdown-menu"
+              aria-labelledby="dropdownButton"
+            >
+              <li class="dropdown-item active" onclick="dropDown('Done',this)">
+                Done
+              </li>
+              <li class="dropdown-item" onclick="dropDown('Todo',this)">
+                Todo
+              </li>
+            </ul>
+          </div>
+        </div> 
           <br />
           <!--Các nút để sử dụng-->
           <div class="button-own">
-            <button id="btn-Control-Add" class="btn-primary rounded">
+            <button
+              id="btn-Control-Add"
+              onclick="createTable()"
+              class="btn-primary rounded"
+            >
               Thêm mới
             </button>
-            <button id="btn-Control-Update" class="btn-primary rounded">
+            <button
+              id="btn-Control-Update"
+              onclick="updateTable()"
+              class="btn-primary rounded"
+            >
               Cập nhật
             </button>
-            <button id="btn-Control-Edit" class="btn-primary rounded">
-              Sửa
+            <button
+              onclick="deleteData()"
+              id="btn-Control-Edit"
+              class="btn-primary rounded"
+            >
+              Xoá
             </button>
           </div>
-          <!--Dự phòng sẽ cần dùng nếu học thêm hoặc thầy hỏi-->
-          <!-- <div class="text-Value">
-                    <label for="Name">Name</label>
-                    <input type="text" id="inputValue1">
-                    <label for="status">Status</label>
-                    <input type="text" id="inputValue2">
-                    <label for="time">Time</label>
-                    <input type="text" id="inputValue3">
-                </div> -->
           <h2 class="text-primary">1.Task(s)</h2>
           <div id="table-Own-Here"></div>
-          <!-- <table id="table" class="table table-bordered table-hover">
-                    <caption>List of Names</caption>
-                    <thead>
-                        <tr class="table-active">
-                            <th>Stt</th>
-                            <th>Name</th>
-                            <th>Status</th>
-                            <th>Time</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tbody">
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>@mdo</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>Jacob</td>
-                          <td>Thornton</td>
-                          <td>@fat</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td colspan="2">Larry the Bird</td>
-                          <td>@twitter</td>
-                        </tr>
-                      </tbody>
-                </table> -->
+          <table id="table" class="table table-bordered table-hover">
+            <caption>
+              Table
+            </caption>
+            <thead>
+              <tr class="table-active">
+                <th>Name</th>
+                <th>Status</th>
+                <th>Time</th>
+              </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
         </div>
       </div>
     </div>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
     <script src="todo.js"></script>
   </body>
 </html>
